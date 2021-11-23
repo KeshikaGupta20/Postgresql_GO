@@ -1,10 +1,9 @@
 package router
 
 import (
-
 	"github.com/gofiber/fiber/v2"
 
-   c "github.com/KeshikaGupta20/Postgresql_GO/controller"
+	c "github.com/KeshikaGupta20/Postgresql_GO/controller"
 )
 
 func RegisterRoutes(app fiber.Router) {
@@ -15,5 +14,5 @@ func RegisterRoutes(app fiber.Router) {
 
 	app.Get("/getpro", c.GetEmployee)
 
-	app.Put("/updatepro/:id", c.GetEmployees)
+	app.Get("/getpro/:id", c.GetEmployees)
 }

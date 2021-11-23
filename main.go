@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/KeshikaGupta20/Postgresql_GO/database"
@@ -19,14 +18,13 @@ func main() {
 	app := fiber.New()
 
 	app.Use(logger.New())
-	fmt.Println("error 1")
 
 	godotenv.Load()
 
 	database.ConnectDB()
 
 	router.RegisterRoutes(app)
-	fmt.Println("error 2")
+
 	log.Fatal(app.Listen(":3000"))
 
 }
